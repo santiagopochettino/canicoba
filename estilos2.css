@@ -1,0 +1,569 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"),
+    url("/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url("/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: local("Montserrat-Medium"),
+    url("/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: local("Montserrat-SemiBold"),
+    url("/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+}
+h4 {
+  padding-top: 130px;
+  padding-left: 80px;
+  font-size: 32px;
+  font-family: "Montserrat-SemiBold";
+}
+/*********************Modal carrusel*****************************/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  padding-top: 10px;
+  padding-left: 80px;
+  width: 55%;
+}
+.columna {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.columna img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px;
+  filter: grayscale(0%);
+  transition: all 0.3s ease;
+}
+.columna img:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay .slideshow {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.slideshow img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.btn_cerrar {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  font-size: 35px;
+
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+  transition: all 0.2s ease;
+}
+.btn_cerrar:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.botones {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #000;
+}
+.botones:hover > i {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+.atras {
+  left: 20px;
+}
+.adelante {
+  right: 20px;
+}
+.mdi {
+  pointer-events: none;
+}
+/******************texto 4mtrs**********************/
+.text-4m {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  float: right;
+  margin-top: -400px;
+  margin-right: 170px;
+}
+.text-4m h3 {
+  font-family: "Montserrat-Bold";
+  font-size: 22px;
+}
+.text-4m p {
+  font-family: "Montserrat-Regular";
+  font-size: 18px;
+}
+/**************text 5mtrs***************************/
+.carp5 {
+  height: 680px;
+}
+.text-5m {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  float: right;
+  margin-top: -210px;
+  margin-right: 320px;
+}
+.text-5m h3 {
+  font-family: "Montserrat-Bold";
+  font-size: 22px;
+}
+.text-5m p {
+  font-family: "Montserrat-Regular";
+  font-size: 18px;
+}
+.linea4 {
+  margin-left: 75px;
+  height: 1px;
+  width: 90%;
+  background-color: #3164ab;
+  margin-top: 40px;
+}
+.linea-x {
+  margin-left: 75px;
+  height: 1px;
+  width: 90%;
+  background-color: #3164ab;
+  margin-top: 40px;
+}
+.linea-ban {
+  margin-left: 75px;
+  height: 1px;
+  width: 90%;
+  background-color: #3164ab;
+  margin-top: 40px;
+}
+
+.linea5 {
+  margin-left: 75px;
+  height: 1px;
+  width: 90%;
+  background-color: #3164ab;
+  margin-top: 200px;
+}
+/**************** 6 m**************************************/
+.text-6m {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  float: right;
+  margin-top: -400px;
+  margin-right: 170px;
+}
+.text-6m h3 {
+  font-family: "Montserrat-Bold";
+  font-size: 22px;
+}
+.text-6m p {
+  font-family: "Montserrat-Regular";
+  font-size: 18px;
+}
+/************* text baños******************************/
+.texto-ban {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  float: right;
+  margin-top: -700px;
+  margin-right: 170px;
+}
+.texto-ban h3 {
+  font-family: "Montserrat-Bold";
+  font-size: 22px;
+}
+.texto-ban p {
+  font-family: "Montserrat-Regular";
+  font-size: 18px;
+}
+.acomodar {
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .columna {
+    flex: 40%;
+    max-width: 40%;
+  }
+  .botones {
+    font-size: 55px;
+  }
+  .atras {
+    left: 5px;
+  }
+  .adelante {
+    right: 5px;
+  }
+  .slideshow img {
+    width: 98%;
+  }
+  .acomodar {
+    padding-top: 100px;
+    height: auto;
+  }
+  .text-4m {
+    margin-top: -350px;
+    margin-right: 100px;
+  }
+  .text-6m {
+    margin-top: -350px;
+    margin-right: 100px;
+  }
+  .text-5m {
+    margin-top: -120px;
+    margin-right: 100px;
+  }
+  .carp5 {
+    height: 720px;
+  }
+  .linea4 {
+    margin-left: 75px;
+    height: 1px;
+    width: 80%;
+    background-color: #3164ab;
+    margin-top: 40px;
+  }
+  .linea-x {
+    margin-left: 75px;
+    height: 1px;
+    width: 80%;
+    background-color: #3164ab;
+    margin-top: 40px;
+  }
+  .linea-ban {
+    margin-left: 75px;
+    height: 1px;
+    width: 80%;
+    background-color: #3164ab;
+    margin-top: 40px;
+  }
+
+  .linea5 {
+    margin-left: 75px;
+    height: 1px;
+    width: 80%;
+    background-color: #3164ab;
+    margin-top: 230px;
+  }
+  .hr5 {
+    margin-left: 75px;
+    height: 1px;
+    width: 80%;
+    background-color: #3164ab;
+    margin-top: 40px;
+  }
+  .texto-ban {
+    margin-top: -520px;
+    margin-right: 100px;
+  }
+} /*hasta aca*/
+@media screen and (max-width: 600px) {
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    padding-top: 10px;
+    padding-left: 12px;
+    width: 100%;
+  }
+  .columna {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .columna img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0%);
+    padding: 4px 4px;
+  }
+  .overlay .slideshow {
+    width: 90%;
+    height: 38%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+  }
+
+  .acomodar {
+    padding-top: 10px;
+    margin-left: 0px;
+    height: auto;
+  }
+  .acomodar h4 {
+    font-size: 28px;
+    margin-left: -65px;
+  }
+  /******************texto 4mtrs**********************/
+  .text-4m {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    float: none;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+  /******************* 6m***************************/
+  .text-6m {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    float: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+
+  /**************text 5mtrs***************************/
+  .carp5 {
+    height: auto;
+  }
+  .text-5m {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    float: none;
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+  .text-5m h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 22px;
+  }
+  .text-5m p {
+    font-family: "Montserrat-Regular";
+    font-size: 18px;
+  }
+
+  .linea4 {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 30px;
+  }
+
+  .linea5 {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 0px;
+  }
+  .linea-x {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 20px;
+  }
+  /************* text baños******************************/
+  .texto-ban {
+    width: 85%;
+    float: none;
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+  .linea-ban {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 20px;
+  }
+} /*hasta aca*/
+@media all and (max-width: 399px) {
+  .acomodar {
+    padding-top: 10px;
+    margin-left: 0px;
+    height: auto;
+  }
+  .acomodar h4 {
+    font-size: 28px;
+    margin-left: -65px;
+  }
+  /******************texto 4mtrs**********************/
+  .text-4m {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    float: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+  .text-4m h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+  }
+  .text-4m p {
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+  }
+  /******************* 6m***************************/
+  .text-6m {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    float: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+  .text-6m h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+  }
+  .text-6m p {
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+  }
+
+  /**************text 5mtrs***************************/
+  .carp5 {
+    height: auto;
+  }
+  .text-5m {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    float: none;
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+  .text-5m h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+  }
+  .text-5m p {
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+  }
+
+  .linea4 {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 30px;
+  }
+
+  .linea5 {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 0px;
+  }
+  .linea-x {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 20px;
+  }
+  /************* text baños******************************/
+  .texto-ban {
+    width: 85%;
+    float: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 30px;
+  }
+  .linea-ban {
+    margin-left: 15px;
+    height: 1px;
+    width: 90%;
+    background-color: #3164ab;
+    margin-top: 20px;
+  }
+  .texto-ban h3 {
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+  }
+  .texto-ban p {
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+  }
+}

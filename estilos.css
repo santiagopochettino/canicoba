@@ -1,0 +1,3079 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"),
+    url("/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url("/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: local("Montserrat-Medium"),
+    url("/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: local("Montserrat-SemiBold"),
+    url("/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+body {
+  font-family: "Montserrat-Regular";
+}
+
+.content {
+  position: relative;
+  margin: 0 auto;
+}
+.content header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0px 3px 6px #00000029;
+}
+/************navbar1*****************************************************************/
+.navbar1 {
+  height: 30px;
+  background-color: #132b5e;
+}
+.mail {
+  margin-left: 120px;
+}
+.mail a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  float: left;
+  margin-top: 4px;
+}
+.mail :hover {
+  color: rgb(170, 170, 170);
+}
+.principal {
+  float: right;
+  margin-right: 120px;
+  margin-top: 4px;
+}
+.principal ul {
+  list-style: none;
+}
+.principal ul li {
+  display: inline;
+}
+.principal ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+}
+.principal ul li a:hover {
+  background-color: white;
+  color: #132b5e;
+  font-weight: bold;
+  padding: 4px 20px;
+}
+/**************** Navbar 2********************************************/
+.secundario {
+  height: 85px;
+  background-color: #3164ab;
+}
+
+.secundario ul {
+  list-style: none;
+  float: right;
+  margin-top: -38px;
+  margin-right: 120px;
+  font-family: "Montserrat-Bold";
+}
+.secundario li {
+  line-height: 2rem;
+  position: relative;
+}
+.secundario li ul {
+  position: absolute;
+  font-family: "Montserrat-Regular";
+}
+.secundario a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 0 1.5rem;
+  transition: all 0.6s ease;
+  text-align: center;
+}
+
+.hover :hover {
+  background: #3164ab;
+  color: #fff;
+  text-decoration: none;
+}
+.secundario li ul {
+  display: none;
+}
+.secundario li:hover ul {
+  display: block;
+  width: 200px;
+}
+/*primer nivel*/
+.secundario > ul {
+  background: #3164ab;
+  display: table;
+  margin-top: -48px;
+}
+
+.secundario > ul > li {
+  float: left;
+  text-decoration: none;
+}
+/*segundo nivel*/
+.secundario li li {
+  background: #132b5e;
+  top: 69px;
+}
+
+.logo img {
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 120px;
+}
+.p-o {
+  font-size: 18px;
+  margin-top: 5px;
+  text-align: left;
+}
+.p-o:hover {
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+}
+.p-b {
+  font-size: 18px;
+  margin-top: 5px;
+}
+.p-b:hover {
+  color: #3164ab;
+  background-color: #fff;
+  text-decoration: none;
+}
+/**********Social*********************************************************/
+.social {
+  position: fixed;
+  left: 0;
+  top: 200px;
+  z-index: 2000;
+}
+.social ul {
+  list-style: none;
+}
+
+.social ul li a {
+  display: inline-block;
+  color: white;
+  background-color: #076aff;
+  padding: 20px 10px;
+  text-decoration: none;
+  box-shadow: 3px 3px 6px #00000029;
+  opacity: 1;
+  font-size: 29px;
+}
+.icon-facebook {
+  border-radius: 0px 15px 0px 0px;
+}
+
+.icon-whatsapp {
+  border-radius: 0px 0px 15px 0px;
+}
+/*********** Seccion parallax**************************************************/
+.parallax {
+  height: 800px;
+  background-image: url(/imagenes/inicio.jpg);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  position: relative;
+}
+.parallax::before {
+  position: absolute;
+  content: "";
+  background-color: #020016;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
+.parallax h2 {
+  font-size: 38px;
+  color: #fff;
+  width: 450px;
+  margin-left: 120px;
+  padding-top: 100px;
+  position: relative; /*quita transparencias*/
+  font-family: "Montserrat-Bold";
+}
+.animate h2 {
+  animation-name: animacion;
+  animation-duration: 3s;
+}
+@keyframes animacion {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: -50%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.parallax h3 {
+  width: 720px;
+  margin-top: 44px;
+  float: right;
+  color: #fff;
+  position: relative;
+  font-size: 177px;
+  font-family: "Montserrat-Bold";
+}
+.years h3 {
+  animation-name: years;
+  animation-duration: 2s;
+}
+@keyframes years {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: -50%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.destacado_in {
+  font-size: 90px;
+}
+
+.in-fondo {
+  width: 100%;
+  height: 142px;
+  margin: 0;
+  transform: translateY(145%);
+}
+.in-fondo h4 {
+  width: 520px;
+  height: 40px;
+  font-size: 28px;
+  float: right;
+  margin-right: -520px;
+  margin-top: -50px;
+  color: #218ff0;
+}
+.in-fondo {
+  background-color: #fff;
+}
+.logo2 img {
+  width: 200px;
+  height: 140px;
+  margin-left: 250px;
+}
+/*************** Secccion estrellas ***********************************************/
+.estrellas {
+  height: 400px;
+  margin-bottom: -60px;
+}
+.estrellas p {
+  font-family: "Montserrat-Medium";
+  font-size: 38px;
+  color: #45add4;
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+.destacado_azul {
+  font-family: "Montserrat-bold";
+  color: #132b5e;
+  font-weight: bold;
+}
+.icon-star {
+  color: #45add4;
+  font-size: 25px;
+}
+.star3 {
+  margin-bottom: 50px;
+  padding-left: 650px;
+  width: 1000px;
+}
+/**************carpas  ************************************/
+.carpas {
+  height: 400px;
+  background-color: #1d63ab;
+  margin-bottom: 20px;
+}
+.carpas-text {
+  float: right;
+  color: white;
+  margin-top: 40px;
+  width: 50%;
+  padding-left: 150px;
+}
+.carpas-text h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: "Montserrat-Bold";
+}
+.carpas-text ul li {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.carpas-text ul {
+  list-style-type: none;
+}
+.linea_C {
+  display: inline;
+  border: 2px solid #fff;
+  background-color: #fff;
+  margin-right: 5px;
+}
+.carpas img {
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+  margin-left: 120px;
+
+  height: 400px;
+}
+/************************baños portatiles********************************/
+.b-portatiles {
+  height: 400px;
+  background-color: #132d5a;
+  margin-bottom: 20px;
+}
+.b-text {
+  float: left;
+  color: white;
+  margin-top: 40px;
+  width: 50%;
+  margin-left: 120px;
+}
+.b-text h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: "Montserrat-Bold";
+}
+.b-text ul li {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.b-text ul {
+  list-style-type: none;
+}
+.linea_C {
+  display: inline;
+  border: 2px solid #fff;
+  background-color: #fff;
+  margin-right: 5px;
+}
+.b-portatiles img {
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+  height: 400px;
+}
+/**********************todo**************************************/
+.todo {
+  height: 400px;
+  background-color: #1d63ab;
+}
+.todo-text {
+  float: right;
+  color: white;
+  margin-top: 40px;
+  width: 50%;
+  padding-left: 150px;
+}
+.todo-text h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: "Montserrat-Bold";
+}
+.todo-text ul li {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.todo-text ul {
+  list-style-type: none;
+}
+.todo img {
+  clip-path: polygon(14% 0, 67% 0, 88% 100%, 31% 100%);
+  height: 400px;
+}
+/************************desde**************************************************/
+.desde {
+  height: 800px;
+  padding-left: 120px;
+  padding-bottom: 35px;
+  padding-top: 95px;
+}
+.linea {
+  height: 4px;
+  width: 90%;
+  background-color: #1d63ab;
+}
+.destacado_t {
+  font-size: 164px;
+  font-family: "Montserrat-Bold";
+  color: #1d63ab;
+  font-weight: bold;
+}
+.destacado_a {
+  font-family: "Montserrat-Regular";
+  font-size: 73px;
+  color: #132d5a;
+  font-weight: 900;
+}
+.destacado_de {
+  font-family: "Montserrat-Bold";
+  font-size: 40px;
+  color: #132d5a;
+  font-weight: 900;
+}
+.treinta {
+  float: left;
+  margin-top: -200px;
+  margin-right: 400px;
+  margin-left: 0px;
+}
+.arg img {
+  width: 200%;
+  height: 200%;
+  margin-top: -550px;
+}
+.desde-text {
+  width: 40%;
+  height: 550px;
+  padding-top: 20px;
+  margin-left: -120px;
+}
+
+.desde-text p {
+  color: #132d5a;
+  margin-left: 120px;
+  font-family: "Montserrat-Medium";
+  font-size: 38px;
+  float: left;
+}
+
+.arg {
+  float: left;
+  margin-bottom: 70px;
+}
+/***************************contacto******************************************/
+.contacto {
+  height: 600px;
+  background-color: #132d5a;
+  color: #fff;
+}
+.contacto p {
+  font-family: "Montserrat-Regular";
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left: 120px;
+}
+.logo3 img {
+  width: 20%;
+  height: 15%;
+  margin-left: 110px;
+  margin-top: -40px;
+}
+.destacado_c {
+  font-family: "Montserrat-Medium";
+  font-size: 13px;
+}
+.linea3 {
+  width: 450px;
+  margin-left: 120px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.icon-mail-alt {
+  margin-left: 230px;
+  font-size: 25px;
+}
+.icon-location {
+  font-size: 25px;
+}
+.icon-phone {
+  margin-left: 370px;
+  font-size: 25px;
+}
+.tell {
+  margin-left: 0;
+}
+.formulario {
+  padding: 3rem 0;
+  margin-top: -550px;
+}
+.formulario h2 {
+  font-size: 26px;
+  text-align: center;
+  font-family: "Montserrat-SemiBold";
+  color: #ffffff;
+  margin-left: 383px;
+  margin-bottom: 20px;
+}
+.formulario form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 510px;
+  padding: 0 1rem;
+  margin-left: 58%;
+  margin-right: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-top: 15px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+  margin: 0.5rem 0;
+}
+.field input {
+  font-size: 1.1rem;
+  height: 2.2rem;
+  padding-left: 0.2px;
+  border: 2px solid #69696969;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+}
+.textbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.75rem 0;
+}
+.textbox textarea {
+  font-size: 1.1rem;
+  max-width: 100%;
+  height: 200px;
+  max-height: 15rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  border: 2px solid #69696969;
+  border-radius: 5px;
+}
+
+.linea4 {
+  margin-left: 75px;
+  height: 1px;
+  width: 90%;
+  background-color: #3164ab;
+  margin-top: 40px;
+}
+
+.tel {
+  width: 100%;
+}
+.form-btn {
+  width: 150px;
+  text-align: center;
+  background-color: #1d63ab;
+  margin-bottom: 20px;
+  margin-left: 70%;
+}
+/**************footer**********************/
+footer p {
+  font-family: "Montserrat-Regular";
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.destacado_footer {
+  font-family: "Montserrat-Bold";
+}
+/*********************Empresa.html ************************************************/
+.empresa p {
+  margin-top: 20px;
+  margin-left: 120px;
+  margin-right: 120px;
+  font-family: "Montserrat-Medium";
+}
+.empresa {
+  height: 1200px;
+  padding-top: 100px;
+}
+.empresa li {
+  margin-left: 150px;
+}
+.destacado_em {
+  color: #076aff;
+  font-family: "Montserrat-Bold";
+  font-size: 32px;
+}
+.destacado_neg {
+  font-family: "Montserrat-Bold";
+}
+/************* Baños.html ********************************************/
+.banios {
+  height: 800px;
+
+  margin-right: 120px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+/*************  pisos.html ***********************************************************/
+.pisos {
+  height: 600px;
+  margin-left: 120px;
+  margin-right: 120px;
+  padding-top: 100px;
+}
+
+/************** cielorazo.html   **********************************************************/
+.cielo {
+  height: 600px;
+  margin-left: 120px;
+  margin-right: 120px;
+  padding-top: 100px;
+}
+
+/************************** pistas.html ********************************/
+.pistas {
+  height: 600px;
+  margin-left: 120px;
+  margin-right: 120px;
+  padding-top: 100px;
+}
+.pistas p {
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+.pistas li {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+/**************** Modal ***********************************************************************/
+
+.mod {
+  width: 100%;
+  height: 100vh;
+}
+
+.mod label {
+  font-family: "Montserrat-Bold";
+}
+
+.modal-content {
+  margin: 0px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.modal-body input {
+  margin-bottom: 5px;
+  font-size: medium;
+}
+.modal-btn {
+  float: right;
+  background-color: #000;
+  width: 160px;
+  top: -10px;
+}
+.cerrar-x {
+  float: right;
+  margin-right: 15px;
+  margin-top: -10px;
+}
+.modal-header {
+  margin-top: -10px;
+}
+.modal-body {
+  margin-top: -10px;
+}
+
+/*************  modal2    ***************************************************/
+.modd {
+  width: 95%;
+  height: 500px;
+  padding-top: 450px;
+}
+.modd label {
+  font-family: "Montserrat-Bold";
+}
+
+.modal-content {
+  margin: 0;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.modal-body input {
+  margin-bottom: 10px;
+  font-size: medium;
+}
+.modal-btn {
+  float: right;
+  background-color: #000;
+  width: 160px;
+  top: -10px;
+}
+.cerrar-x {
+  float: right;
+  margin-right: 15px;
+  margin-top: -10px;
+}
+.modal-header {
+  margin-top: -10px;
+}
+.modal-body {
+  margin-top: -10px;
+}
+/****** Menu hamburguesa*********/
+
+.menu-button-mobile {
+  font-size: 30px;
+  display: none;
+  color: #fff;
+}
+.menu-container-mobile {
+  width: 200px;
+  height: 100vh;
+  background-color: #132b5e;
+  color: #fff;
+  position: absolute;
+  opacity: 0.95;
+  top: 70px;
+  left: -100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: left 0.2s;
+}
+.menu-container-mobile a {
+  display: none;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#toggle-mobile-menu:checked ~ .menu-container-mobile {
+  left: 0;
+  transition: left 0.2s;
+}
+/***** fin del menu hambuguesa*****/
+
+@media all and (min-width: 700px) and (max-width: 1024px) {
+  .content header {
+    box-shadow: 0px 0px 0px;
+    height: auto;
+  }
+  /************navbar1*****************************************************************/
+  .navbar1 {
+    height: auto;
+  }
+  .mail {
+    margin-left: 250px;
+    height: 42px;
+  }
+  .mail a {
+    float: none;
+    margin-top: 4px;
+  }
+  .principal {
+    float: none;
+    margin-right: 0px;
+    margin-top: 4px;
+    margin-left: 30px;
+    display: none;
+  }
+  .principal ul {
+    list-style: none;
+  }
+  .principal ul li {
+    display: inline;
+  }
+  .principal ul li a {
+    padding: 1px 10px;
+    margin-left: 25px;
+  }
+  /**************** Navbar 2********************************************/
+  .secundario {
+    height: auto;
+    margin-top: -16px;
+  }
+  .secundario ul {
+    float: none;
+
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .secundario li {
+    line-height: 1rem;
+    width: 120px;
+    margin-right: 5px;
+    display: none; /* inline-block*/
+    position: relative;
+  }
+  .secundario li ul {
+    position: absolute;
+  }
+  .secundario a {
+    display: block;
+  }
+  .secundario li ul {
+    display: none;
+  }
+  .secundario li:hover ul {
+    display: block;
+    width: 200px;
+  }
+  /*primer nivel*/
+  .secundario > ul {
+    display: table;
+  }
+  .secundario > ul > li {
+    float: none;
+  }
+  /*segundo nivel*/
+  .secundario li li {
+    top: 5px;
+  }
+  .logo img {
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 250px;
+  }
+  /****** Menu hamburguesa*********/
+
+  .menu-button-mobile {
+    /*el menu burguer en si*/
+    font-size: 40px;
+    height: 60px;
+    display: block;
+    margin-left: 70px;
+    margin-right: 650px;
+    margin-top: -70px;
+  }
+  .menu-container-mobile {
+    width: 100%;
+    height: 100vh;
+    background-color: #132b5e;
+    position: absolute;
+    opacity: 0.99;
+    top: 90px;
+    left: -100%;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: right 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .menu-container-mobile > a {
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #132b5e;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 34.5px;
+    top: -55px;
+    width: 33.3%;
+    position: relative;
+  }
+  #toggle-mobile-menu:checked ~ .menu-container-mobile {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** segundo nivel********/
+  .menu-container2 {
+    width: 100%;
+    height: 140px;
+    top: -170px;
+    position: relative;
+  }
+  .menu-container2 ul {
+    list-style: none;
+    font-family: "Montserrat-Bold";
+  }
+  .menu-container2 li {
+    line-height: 2rem;
+    position: relative;
+    width: 280px;
+  }
+  .menu-container2 li ul {
+    position: absolute;
+    font-family: "Montserrat-Regular";
+  }
+  .menu-container2 ul li {
+    display: flex;
+    justify-content: center;
+  }
+  .menu-container2 ul li a {
+    position: relative;
+    left: 80px;
+    top: 30px;
+  }
+  .contenedor-menu {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+  }
+  .contenedor-menu a:hover {
+    text-decoration: none;
+  }
+  .contenedor-menu a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+  }
+  .menu-btn {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  .menu-label {
+    width: 100%;
+  }
+  #toggle-mobile-menu1:checked ~ .contenedor-menu {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** tercer nivel********/
+  .menu-container3 {
+    width: 100%;
+    height: 140px;
+    top: -350px;
+    position: relative;
+  }
+  .contenedor-menu2 {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+  }
+  .contenedor-menu2 a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+  }
+  #toggle-mobile-menu2:checked ~ .contenedor-menu2 {
+    left: 0;
+    transition: left 0.2s;
+  }
+  .menu-btn2 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  /***********nivel 4******************/
+  .menu-container4 {
+    width: 100%;
+    height: 150px;
+    top: -55px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .menu4 {
+    position: absolute;
+    top: -40px;
+    right: 0%;
+    width: 100%;
+    transition: left 0.2s;
+    background-color: #3164ab;
+  }
+  .menu4 a {
+    margin-top: 27px;
+  }
+  /***** fin del menu hambuguesa*****/
+  /**********Social**********************************************/
+  .social {
+    left: 40%;
+    top: 92%;
+    z-index: 2000;
+  }
+  .social ul {
+    list-style: none;
+    transform: translate(-40%, 0%);
+    display: flex;
+  }
+  .social ul li a {
+    display: block;
+    position: relative;
+    padding: 10px 65px;
+    opacity: 1;
+    font-size: 40px;
+  }
+  .icon-facebook {
+    border-radius: 15px 0px 0px 0px;
+  }
+  .icon-whatsapp {
+    border-radius: 0px 15px 0px 0px;
+  }
+  /*********** Seccion parallax**************************************************/
+  .parallax {
+    height: 900px;
+  }
+
+  .parallax h2 {
+    font-size: 28px;
+    width: 450px;
+    margin-left: 70px;
+    padding-top: 200px;
+  }
+  .parallax h3 {
+    width: 380px;
+    margin-top: 140px;
+    margin-left: 0px;
+    font-size: 90px;
+    float: right;
+  }
+  .destacado_in {
+    font-size: 70px;
+  }
+  .in-fondo {
+    width: 100%;
+    height: 154px;
+    margin: 0;
+    transform: translateY(145%);
+  }
+  .in-fondo h4 {
+    width: 330px;
+    height: 40px;
+    font-size: 18px;
+    float: right;
+    margin-right: -100px;
+    margin-top: 100px;
+  }
+
+  .logo2 img {
+    width: 25%;
+    height: 25%;
+    float: left;
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+  /*************** Secccion estrellas ***********************************************/
+  .estrellas {
+    height: 400px;
+    margin-bottom: 0px;
+  }
+  .estrellas p {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .icon-star {
+    font-size: 20px;
+  }
+  .star3 {
+    padding-bottom: 30px;
+    padding-left: 350px;
+    width: 700px;
+  }
+  /**************carpas  ************************************/
+  .carpas-text {
+    float: right;
+
+    margin-top: -340px;
+    width: 50%;
+  }
+  .carpas-text h3 {
+    font-size: 24px;
+  }
+  .carpas-text ul li {
+    font-size: 18px;
+  }
+  .carpas img {
+    margin-left: 70px;
+    width: 50%;
+  }
+  /************************baños portatiles********************************/
+
+  .b-text {
+    float: left;
+    margin-top: -340px;
+    width: 50%;
+    margin-left: 70px;
+  }
+  .b-text h3 {
+    font-size: 24px;
+  }
+  .b-text ul li {
+    font-size: 18px;
+  }
+
+  .b-portatiles img {
+    float: right;
+    width: 50%;
+    margin-right: 50px;
+  }
+  /**********************todo**************************************/
+
+  .todo-text {
+    float: right;
+    margin-top: 40px;
+    width: 50%;
+    padding-left: 150px;
+  }
+  .todo-text h3 {
+    font-size: 24px;
+  }
+  .todo-text ul li {
+    font-size: 18px;
+  }
+
+  .todo img {
+    width: 50%;
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+  }
+  /************************desde**************************************************/
+  .desde {
+    height: 800px;
+    padding-left: 70px;
+  }
+  .destacado_t {
+    font-size: 70px;
+  }
+  .destacado_a {
+    font-size: 43px;
+  }
+  .destacado_de {
+    font-size: 30px;
+  }
+  .treinta {
+    float: left;
+    margin-top: -120px;
+    margin-right: 300px;
+  }
+
+  .arg img {
+    margin-top: -500px;
+    float: right;
+  }
+  .desde-text {
+    width: 50%;
+    height: 550px;
+    padding-top: 10px;
+    margin-left: -120px;
+  }
+
+  .desde-text p {
+    margin-left: 120px;
+
+    font-size: 38px;
+    float: left;
+  }
+
+  .arg {
+    float: right;
+    margin-bottom: 70px;
+    margin-right: 70px;
+  }
+  /***************************contacto******************************************/
+  #contacto {
+    height: 600px;
+  }
+  .contacto {
+    margin-top: 400px;
+    padding-top: 100px;
+  }
+  .contacto p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+  .logo3 img {
+    height: auto;
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 30px;
+  }
+  .destacado_c {
+    font-size: 13px;
+  }
+  .linea3 {
+    width: 70%;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .icon-phone {
+    margin-left: 0;
+  }
+  .icon-mail-alt {
+    margin-left: 0;
+  }
+  .formulario {
+    padding: 0;
+    margin-top: -980px;
+    background-color: #132d5a;
+    margin-left: 0px;
+  }
+  .formulario h2 {
+    font-size: 26px;
+    text-align: left;
+    font-family: "Montserrat-SemiBold";
+    color: #ffffff;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+  .formulario form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 1rem;
+    margin-left: 30px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-top: 15px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .field input {
+    font-size: 1.1rem;
+    height: 2.2rem;
+    padding-left: 0.2px;
+    border: 2px solid #69696969;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+  }
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.75rem 0;
+  }
+  .textbox textarea {
+    font-size: 1.1rem;
+    max-width: 100%;
+    height: 200px;
+    max-height: 15rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    border: 2px solid #69696969;
+    border-radius: 5px;
+  }
+
+  .form-btn {
+    width: 150px;
+    text-align: center;
+    background-color: #1d63ab;
+    margin-bottom: 20px;
+    margin-left: 70%;
+  }
+
+  /**********footer****************/
+  footer {
+    height: 100px;
+  }
+  footer p {
+    margin-top: 20px;
+  }
+
+  /*********************Empresa.html ************************************************/
+  .empresa p {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: "Montserrat-Medium";
+  }
+  .empresa {
+    height: 1740px;
+    padding-top: 200px;
+  }
+  .empresa li {
+    margin-left: 140px;
+    margin-right: 100px;
+  }
+  .destacado_em {
+    color: #076aff;
+    font-family: "Montserrat-Bold";
+    font-size: 32px;
+  }
+  .destacado_neg {
+    font-family: "Montserrat-Bold";
+  }
+  /************* Baños.html ********************************************/
+  .banios {
+    height: 800px;
+
+    margin-right: 120px;
+    padding-top: 100px;
+    width: 100%;
+  }
+  .banios p {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 120px;
+    position: relative;
+  }
+  .banios ul {
+    margin-top: 20px;
+  }
+  .banios li {
+    margin-left: 40px;
+    margin-bottom: 15px;
+    margin-left: 140px;
+    position: relative;
+  }
+
+  /*************  pisos.html ***********************************************************/
+  .pisos {
+    height: 600px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 100px;
+  }
+  .pisos p {
+    margin-bottom: 5px;
+    padding-top: 5px;
+  }
+  .pisos li {
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+  /************** cielorazo.html   **********************************************************/
+  .cielo {
+    height: 600px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 100px;
+  }
+  .cielo p {
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+  .cielo li {
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+  /************************** pistas.html ********************************/
+  .pistas {
+    height: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 210px;
+  }
+  .pistas p {
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+  .pistas li {
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+  /**************** Modal ***********************************************************************/
+  .mod {
+    width: 100%;
+    height: 100vh;
+    padding-top: 10px;
+  }
+
+  .mod label {
+    font-family: "Montserrat-Bold";
+  }
+
+  .modal-content {
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  .modal-body input {
+    margin-bottom: 10px;
+    font-size: medium;
+  }
+  .modal-btn {
+    float: right;
+    background-color: #000;
+    width: 160px;
+    top: -10px;
+  }
+  .cerrar-x {
+    float: right;
+    margin-right: 15px;
+  }
+
+  /*************  modal2    ***************************************************/
+  .modd {
+    width: 95%;
+    height: 500px;
+    padding-top: 450px;
+  }
+  .modd label {
+    font-family: "Montserrat-Bold";
+  }
+
+  .modal-content {
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  .modal-body input {
+    margin-bottom: 10px;
+    font-size: medium;
+  }
+  .modal-btn {
+    float: right;
+    background-color: #000;
+    width: 160px;
+    top: -10px;
+  }
+  .cerrar-x {
+    float: right;
+  }
+} /*******hasta aca llega   ***************/
+@media all and (min-width: 699px) and (max-width: 768px) {
+  .in-fondo {
+    width: 100%;
+    height: 142px;
+    margin: 0;
+    transform: translateY(157%);
+  }
+  .in-fondo h4 {
+    width: 340px;
+    height: 40px;
+    font-size: 18px;
+    float: left;
+    margin-right: 0px;
+    margin-top: -160px;
+    margin-left: 350px;
+    color: #218ff0;
+  }
+  .in-fondo {
+    background-color: #fff;
+  }
+  .logo2 img {
+    width: 25%;
+    height: 25%;
+    margin-left: 70px;
+  }
+}
+
+@media all and (min-width: 411px) and (max-width: 599px) {
+  .content header {
+    box-shadow: 0px 0px 0px;
+    height: auto;
+  }
+
+  /************navbar1*****************************************************************/
+  .navbar1 {
+    height: auto;
+  }
+  .mail {
+    margin-left: 70px;
+    height: 42px;
+  }
+  .mail a {
+    float: none;
+    margin-top: 4px;
+  }
+  .principal {
+    float: none;
+    margin-right: 0px;
+    margin-top: 4px;
+    margin-left: 30px;
+    display: none;
+  }
+  .principal ul {
+    list-style: none;
+  }
+  .principal ul li {
+    display: inline;
+  }
+  .principal ul li a {
+    padding: 1px 10px;
+    margin-left: 25px;
+  }
+
+  /**************** Navbar 2********************************************/
+  .secundario {
+    height: auto;
+    margin-top: -16px;
+  }
+
+  .secundario ul {
+    float: none;
+
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .secundario li {
+    line-height: 1rem;
+    width: 120px;
+    margin-right: 5px;
+    display: none; /* inline-block*/
+    position: relative;
+  }
+  .secundario li ul {
+    position: absolute;
+  }
+  .secundario a {
+    display: block;
+  }
+  .secundario li ul {
+    display: none;
+  }
+  .secundario li:hover ul {
+    display: block;
+    width: 200px;
+  }
+  /*primer nivel*/
+  .secundario > ul {
+    display: table;
+  }
+  .secundario > ul > li {
+    float: none;
+  }
+  /*segundo nivel*/
+  .secundario li li {
+    top: 5px;
+  }
+
+  .logo img {
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 75px;
+  }
+
+  /**********Social*********************************************************/
+  .social {
+    left: 40%;
+    top: 92%;
+    z-index: 2000;
+  }
+  .social ul {
+    list-style: none;
+    transform: translate(-40%, 0%);
+    display: flex;
+  }
+
+  .social ul li a {
+    display: block;
+    position: relative;
+    padding: 10px 30px;
+    opacity: 1;
+    font-size: 30px;
+  }
+  .icon-facebook {
+    border-radius: 15px 0px 0px 0px;
+  }
+
+  .icon-whatsapp {
+    border-radius: 0px 15px 0px 0px;
+  }
+
+  /*********** Seccion parallax**************************************************/
+  .parallax {
+    height: auto;
+    padding-top: 300px;
+    padding-bottom: 200px;
+    position: relative;
+    width: 100%;
+  }
+
+  .parallax h2 {
+    font-size: 28px;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: -170px;
+    padding-top: 0;
+  }
+  .parallax h3 {
+    width: 55%;
+    margin-top: 120px;
+    float: none;
+    margin-left: 150px;
+    font-size: 65px;
+  }
+  .destacado_in {
+    font-size: 40px;
+  }
+
+  .in-fondo {
+    display: none;
+  }
+
+  /*************** Secccion estrellas ***********************************************/
+  .estrellas {
+    height: auto;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .estrellas p {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .icon-star {
+    font-size: 25px;
+  }
+  .star3 {
+    padding-left: 0px;
+    margin-left: 150px;
+    width: 30%;
+    margin-bottom: 40px;
+    margin-top: -15px;
+  }
+  /**************carpas  ************************************/
+  .carpas {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .carpas-text {
+    float: none;
+    max-width: 40%;
+    padding-left: 0px;
+    margin-left: 220px;
+    margin-top: -149px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+  }
+  .carpas-text h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .carpas-text ul li {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-bottom: 8.5px;
+  }
+  .linea_C {
+    display: inline;
+    border: 1px solid #fff;
+
+    margin-right: 5px;
+  }
+
+  .carpas img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    margin-left: 0px;
+    max-width: 50%;
+    margin-top: 0px;
+    height: auto;
+  }
+  /************************baños portatiles********************************/
+  .b-portatiles {
+    height: auto;
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+  .b-text {
+    float: none;
+    max-width: 40%;
+    padding-left: 10px;
+    margin-top: -136px;
+    margin-left: 0px;
+    padding-bottom: 0.5px;
+    padding-top: 2px;
+  }
+  .b-text h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .b-text ul li {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-bottom: 6px;
+  }
+  .linea_C {
+    border: 1px solid #fff;
+  }
+  .b-portatiles img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    height: auto;
+    max-width: 50%;
+    margin-top: 0px;
+    margin-left: 200px;
+  }
+  /**********************todo**************************************/
+  .todo {
+    height: auto;
+
+    margin-bottom: 20px;
+  }
+  .todo-text {
+    float: none;
+    max-width: 40%;
+    padding-left: 0px;
+    margin-left: 220px;
+    margin-top: -108px;
+    height: 108px;
+  }
+  .todo-text h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .todo-text ul li {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-bottom: 7px;
+  }
+  .linea_C {
+    display: inline;
+    border: 1px solid #fff;
+
+    margin-right: 5px;
+  }
+
+  .todo img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    margin-left: 0px;
+    max-width: 50%;
+    margin-top: 0px;
+    height: auto;
+  }
+
+  /************************desde**************************************************/
+  .desde {
+    display: none;
+  }
+  /***************************contacto******************************************/
+  #contacto {
+    height: 600px;
+  }
+  .contacto {
+    margin-top: 400px;
+    padding-top: 100px;
+  }
+  .contacto p {
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+  }
+  .logo3 img {
+    height: 45%;
+    width: 45%;
+    margin-left: 110px;
+    margin-top: 30px;
+    padding-bottom: 0;
+  }
+  .destacado_c {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .linea3 {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .icon-location {
+    font-size: 16px;
+  }
+  .icon-mail-alt {
+    margin-left: 0px;
+    font-size: 16px;
+  }
+  .icon-phone {
+    margin-left: 0px;
+    font-size: 16px;
+  }
+  .formulario {
+    padding: 0;
+    margin-top: -980px;
+    margin-left: -300px;
+    background-color: #132d5a;
+    padding-bottom: 20px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .formulario h2 {
+    font-size: 24px;
+    margin-left: 12%;
+    padding-top: 15px;
+  }
+  .formulario form {
+    width: 50%;
+    max-width: 470px;
+    padding: 0 1rem;
+    margin-left: 46%;
+    margin-right: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-top: 15px;
+  }
+  /*************** footer ************************/
+  footer {
+    height: 100px;
+  }
+  footer p {
+    margin-top: 20px;
+  }
+  /*********************Empresa.html ************************************************/
+  .empresa p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .empresa {
+    height: auto;
+    padding-top: 100px;
+  }
+  .empresa li {
+    margin-left: 150px;
+  }
+  .destacado_em {
+    color: #076aff;
+    font-family: "Montserrat-Bold";
+    font-size: 32px;
+  }
+  .destacado_neg {
+    font-family: "Montserrat-Bold";
+  }
+  /************* Baños.html ********************************************/
+  .banios {
+    height: 800px;
+
+    margin-right: 120px;
+    padding-top: 100px;
+    width: 100%;
+  }
+  .banios p {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 120px;
+    position: relative;
+  }
+  .banios ul {
+    margin-top: 20px;
+  }
+  .banios li {
+    margin-left: 40px;
+    margin-bottom: 15px;
+    margin-left: 140px;
+    position: relative;
+  }
+
+  /*************  pisos.html ***********************************************************/
+  .pisos {
+    height: 600px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 100px;
+  }
+  .pisos p {
+    margin-bottom: 5px;
+    padding-top: 5px;
+  }
+  .pisos li {
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+  /************** cielorazo.html   **********************************************************/
+  .cielo {
+    height: 600px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 100px;
+  }
+  .cielo p {
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+  .cielo li {
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+  /************************** pistas.html ********************************/
+  .pistas {
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 100px;
+  }
+  /**************** Modal ***********************************************************************/
+  .mod {
+    width: 100%;
+
+    height: 100vh;
+  }
+  .modal-content {
+    padding-top: 50px;
+  }
+  .modal-body input {
+    margin-bottom: 5px;
+    font-size: medium;
+  }
+  .modal-btn {
+    float: right;
+    background-color: #000;
+    width: 160px;
+    top: -10px;
+  }
+  .cerrar-x {
+    float: right;
+    margin-right: 15px;
+    margin-top: -30px;
+  }
+  .modal-header {
+    margin-top: -10px;
+  }
+  .modal-body {
+    margin-top: -10px;
+  }
+
+  /*************  modal2    ***************************************************/
+  .modd {
+    width: 95%;
+    height: 500px;
+    padding-top: 450px;
+  }
+  .modd label {
+    font-family: "Montserrat-Bold";
+  }
+
+  .modal-content {
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  .modal-body input {
+    margin-bottom: 10px;
+    font-size: medium;
+  }
+  .modal-btn {
+    float: right;
+    background-color: #000;
+    width: 160px;
+    top: -10px;
+  }
+  .cerrar-x {
+    float: right;
+  }
+  /****** Menu hamburguesa*********/
+  .menu-button-mobile {
+    /*el menu burguer en si*/
+    font-size: 30px;
+    height: 60px;
+    display: block;
+    margin-left: 25px;
+    margin-right: 340px;
+    margin-top: -60px;
+  }
+  .menu-container-mobile {
+    width: 100%;
+    height: 100vh;
+    background-color: #132b5e;
+    position: absolute;
+    opacity: 0.99;
+    top: 103px;
+    left: -100%;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: right 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .menu-container-mobile > a {
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #132b5e;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 34.5px;
+    top: -27px;
+    width: 33.3%;
+    position: relative;
+  }
+  #toggle-mobile-menu:checked ~ .menu-container-mobile {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** segundo nivel********/
+  .menu-container2 {
+    width: 100%;
+    height: 140px;
+    top: -90px;
+    position: relative;
+  }
+  .menu-container2 ul {
+    list-style: none;
+    font-family: "Montserrat-Bold";
+  }
+  .menu-container2 li {
+    line-height: 2rem;
+    position: relative;
+    width: 280px;
+  }
+  .menu-container2 li ul {
+    position: absolute;
+    font-family: "Montserrat-Regular";
+  }
+  .menu-container2 ul li {
+    display: flex;
+    justify-content: center;
+  }
+  .menu-container2 ul li a {
+    position: relative;
+    left: 80px;
+    top: 30px;
+  }
+  .contenedor-menu {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+  }
+  .contenedor-menu a:hover {
+    text-decoration: none;
+  }
+  .contenedor-menu a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+  }
+  .menu-btn {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  .menu-label {
+    width: 100%;
+  }
+  #toggle-mobile-menu1:checked ~ .contenedor-menu {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** tercer nivel********/
+  .menu-container3 {
+    width: 100%;
+    height: 140px;
+    top: -210px;
+    position: relative;
+  }
+  .contenedor-menu2 {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+  }
+  .contenedor-menu2 a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+  }
+  #toggle-mobile-menu2:checked ~ .contenedor-menu2 {
+    left: 0;
+    transition: left 0.2s;
+  }
+  .menu-btn2 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  /***********nivel 4******************/
+  .menu-container4 {
+    width: 100%;
+    height: 150px;
+    top: -55px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .menu4 {
+    position: absolute;
+    top: -40px;
+    right: 0%;
+    width: 100%;
+    transition: left 0.2s;
+    background-color: #3164ab;
+  }
+  .menu4 a {
+    margin-top: 27px;
+  }
+  /***** fin del menu hambuguesa*****/
+} /**********hasta aca llega    *********/
+@media all and (max-width: 399px) {
+  .content header {
+    box-shadow: 0px 0px 0px;
+    height: auto;
+  }
+  /************navbar1*****************************************************************/
+  .navbar1 {
+    height: auto;
+  }
+  .mail {
+    margin-left: 45px;
+    height: 42px;
+  }
+  .mail a {
+    float: none;
+    margin-top: 4px;
+  }
+  .principal {
+    float: none;
+    margin-right: 0px;
+    margin-top: 4px;
+    margin-left: 30px;
+    display: none;
+  }
+  .principal ul {
+    list-style: none;
+  }
+  .principal ul li {
+    display: inline;
+  }
+  .principal ul li a {
+    padding: 1px 10px;
+    margin-left: 25px;
+  }
+  /**************** Navbar 2********************************************/
+  .secundario {
+    height: auto;
+    margin-top: -16px;
+  }
+  .secundario ul {
+    float: none;
+
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .secundario li {
+    line-height: 1rem;
+    width: 120px;
+    margin-right: 5px;
+    display: none; /* inline-block*/
+    position: relative;
+  }
+  .secundario li ul {
+    position: absolute;
+  }
+  .secundario a {
+    display: block;
+  }
+  .secundario li ul {
+    display: none;
+  }
+  .secundario li:hover ul {
+    display: block;
+    width: 200px;
+  }
+  /*primer nivel*/
+  .secundario > ul {
+    display: table;
+  }
+  .secundario > ul > li {
+    float: none;
+  }
+  /*segundo nivel*/
+  .secundario li li {
+    top: 5px;
+  }
+  .logo img {
+    height: 50px;
+    margin-top: 8px;
+    margin-left: 60px;
+  }
+  /**********Social*********************************************************/
+  .social {
+    left: 40%;
+    top: 92%;
+    z-index: 2000;
+    position: fixed;
+  }
+  .social ul {
+    list-style: none;
+    transform: translate(-40%, 0%);
+    display: flex;
+  }
+  .social ul li a {
+    display: block;
+    position: relative;
+    padding: 10px 25px;
+    opacity: 1;
+    font-size: 30px;
+  }
+  .icon-facebook {
+    border-radius: 15px 0px 0px 0px;
+  }
+  .icon-whatsapp {
+    border-radius: 0px 15px 0px 0px;
+  }
+  /*********** Seccion parallax**************************************************/
+  .parallax {
+    height: auto;
+    padding-top: 300px;
+    padding-bottom: 200px;
+    position: relative;
+    width: 100%;
+  }
+
+  .parallax h2 {
+    font-size: 24px;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: -170px;
+    padding-top: 0;
+  }
+  .parallax h3 {
+    width: 55%;
+    margin-top: 100px;
+    float: none;
+    margin-left: 130px;
+    font-size: 55px;
+  }
+  .destacado_in {
+    font-size: 35px;
+  }
+
+  .in-fondo {
+    display: none;
+  }
+
+  /*************** Secccion estrellas ***********************************************/
+  .estrellas {
+    height: auto;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  .estrellas p {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .icon-star {
+    font-size: 25px;
+  }
+  .star3 {
+    padding-left: 0px;
+    margin-left: 140px;
+    width: 40%;
+    margin-bottom: 40px;
+    margin-top: -15px;
+  }
+  /**************carpas  ************************************/
+  .carpas {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .carpas-text {
+    float: none;
+    max-width: 40%;
+    padding-left: 20px;
+    margin-left: 180px;
+    margin-top: -140px;
+    padding-bottom: 1px;
+    padding-top: 5px;
+  }
+  .carpas-text h3 {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .carpas-text ul li {
+    font-size: 8px;
+    margin-left: 10px;
+    margin-bottom: 9px;
+  }
+  .linea_C {
+    display: inline;
+    border: 1px solid #fff;
+    margin-right: 5px;
+  }
+  .carpas img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    margin-left: 0px;
+    max-width: 50%;
+    margin-top: 0px;
+    height: auto;
+  }
+  /************************baños portatiles********************************/
+  .b-portatiles {
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .b-text {
+    float: none;
+    max-width: 45%;
+    padding-left: 10px;
+    margin-left: 0px;
+    margin-top: -125px;
+    padding-bottom: 1px;
+    padding-top: 3px;
+  }
+  .b-text h3 {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .b-text ul li {
+    font-size: 8px;
+    margin-left: 10px;
+    margin-bottom: 6px;
+  }
+  .b-portatiles img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    height: auto;
+    max-width: 50%;
+    margin-top: 0px;
+    margin-left: 150px;
+  }
+  /**********************todo**************************************/
+  .todo {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .todo-text {
+    float: none;
+    max-width: 40%;
+    padding-left: 0px;
+    margin-left: 200px;
+    margin-top: -100px;
+    padding-top: 5px;
+    height: 100px;
+  }
+  .todo-text h3 {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  .todo-text ul li {
+    font-size: 8px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+  }
+  .linea_C {
+    display: inline;
+    border: 1px solid #fff;
+    margin-right: 5px;
+  }
+  .todo img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    margin-left: 0px;
+    max-width: 50%;
+    margin-top: 0px;
+    height: auto;
+  }
+  /************************desde**************************************************/
+  .desde {
+    display: none;
+  }
+  /***************************contacto******************************************/
+  #contacto {
+    height: 600px;
+  }
+  .contacto {
+    margin-top: 400px;
+    padding-top: 100px;
+  }
+  .contacto p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+  .logo3 img {
+    height: auto;
+    width: 50%;
+    margin-left: 90px;
+    margin-top: 40px;
+  }
+  .destacado_c {
+    font-size: 13px;
+  }
+  .linea3 {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .icon-phone {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .icon-location {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .icon-mail-alt {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .formulario {
+    padding: 0;
+    margin-top: -980px;
+    background-color: #132d5a;
+    margin-left: -450px;
+  }
+  .formulario h2 {
+    font-size: 26px;
+    text-align: center;
+    font-family: "Montserrat-SemiBold";
+    color: #ffffff;
+    margin-left: 303px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+  .formulario form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 55%;
+    max-width: 310px;
+    padding: 0 1rem;
+    margin-left: 58%;
+    margin-right: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-top: 15px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .field input {
+    font-size: 1.1rem;
+    height: 2.2rem;
+    padding-left: 0.2px;
+    border: 2px solid #69696969;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+  }
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.75rem 0;
+  }
+  .textbox textarea {
+    font-size: 1.1rem;
+    max-width: 100%;
+    height: 200px;
+    max-height: 15rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    border: 2px solid #69696969;
+    border-radius: 5px;
+  }
+  .form-btn {
+    width: 150px;
+    text-align: center;
+    background-color: #1d63ab;
+    margin-bottom: 20px;
+    margin-left: 70%;
+  }
+  /**********footer****************/
+  footer {
+    height: 100px;
+  }
+  footer p {
+    margin-top: 20px;
+  }
+  /****** Menu hamburguesa*********/
+  .menu-button-mobile {
+    /*el menu burguer en si*/
+    font-size: 30px;
+    height: 60px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 340px;
+    margin-top: -60px;
+  }
+  .menu-container-mobile {
+    width: 100%;
+    height: 100vh;
+    background-color: #132b5e;
+    position: absolute;
+    opacity: 0.99;
+    top: 100px;
+    left: -100%;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: left 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .menu-container-mobile > a {
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #132b5e;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 30px;
+    top: -20px;
+    width: 125px;
+    position: relative;
+  }
+  #toggle-mobile-menu:checked ~ .menu-container-mobile {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** segundo nivel********/
+  .menu-container2 {
+    width: 100%;
+    height: 140px;
+    top: -90px;
+    position: relative;
+  }
+  .menu-container2 ul {
+    list-style: none;
+    font-family: "Montserrat-Bold";
+  }
+  .menu-container2 li {
+    line-height: 2rem;
+    position: relative;
+    width: 280px;
+  }
+  .menu-container2 li ul {
+    position: absolute;
+    font-family: "Montserrat-Regular";
+  }
+  .menu-container2 ul li {
+    display: flex;
+    justify-content: center;
+  }
+  .menu-container2 ul li a {
+    position: relative;
+    left: 80px;
+    top: 30px;
+  }
+  .contenedor-menu {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+  }
+  .contenedor-menu a:hover {
+    text-decoration: none;
+  }
+  .contenedor-menu a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+  }
+  .menu-btn {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  .menu-label {
+    width: 100%;
+  }
+  #toggle-mobile-menu1:checked ~ .contenedor-menu {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** tercer nivel********/
+  .menu-container3 {
+    width: 100%;
+    height: 140px;
+    top: -210px;
+    position: relative;
+  }
+  .contenedor-menu2 {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+  }
+  .contenedor-menu2 a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+  }
+  #toggle-mobile-menu2:checked ~ .contenedor-menu2 {
+    left: 0;
+    transition: left 0.2s;
+  }
+  .menu-btn2 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  /***********nivel 4******************/
+  .menu-container4 {
+    width: 100%;
+    height: 150px;
+    top: -55px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .menu4 {
+    position: absolute;
+    top: -40px;
+    right: 0%;
+    width: 100%;
+    transition: left 0.2s;
+    background-color: #3164ab;
+  }
+  .menu4 a {
+    margin-top: 27px;
+  }
+
+  /***** fin del menu hambuguesa*****/
+
+  /*********************Empresa.html ************************************************/
+  .empresa p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .empresa {
+    height: auto;
+    padding-top: 100px;
+  }
+  .empresa li {
+    margin-left: 50px;
+  }
+  /************************** pistas.html ********************************/
+  .pistas {
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 100px;
+  }
+  /***********modal*****/
+  .modal-content {
+    margin-top: 170px;
+  }
+} /*****hasta aca ********/
+@media all and (min-width: 320px) and (max-width: 360px) {
+  /*********** Seccion parallax**************************************************/
+
+  .parallax h2 {
+    font-size: 24px;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: -180px;
+    padding-top: 0;
+  }
+  .parallax h3 {
+    width: 65%;
+    margin-top: 80px;
+    float: none;
+    margin-left: 100px;
+    font-size: 55px;
+  }
+  .destacado_in {
+    font-size: 35px;
+  }
+
+  /*************** Secccion estrellas ***********************************************/
+
+  .icon-star {
+    color: #45add4;
+    font-size: 25px;
+  }
+  .star3 {
+    margin-bottom: 50px;
+    padding-left: 0px;
+    margin-left: 110px;
+    width: 130px;
+  }
+  /**************carpas  ************************************/
+  .carpas {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .carpas-text {
+    margin-top: -120px;
+    width: 60%;
+    padding-left: 0px;
+    height: 120px;
+    float: none;
+    margin-left: 174px;
+  }
+  .carpas-text h3 {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  .carpas-text ul li {
+    font-size: 8px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+  }
+
+  .carpas img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    margin-left: 0px;
+
+    height: auto;
+  }
+  /************************baños portatiles********************************/
+  .b-portatiles {
+    height: auto;
+
+    margin-bottom: 20px;
+  }
+  .b-text {
+    float: left;
+    color: white;
+    margin-top: -100px;
+    width: 50%;
+    margin-left: 0px;
+    height: 100px;
+  }
+  .b-text h3 {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  .b-text ul li {
+    font-size: 8px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+  }
+
+  .b-portatiles img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    height: auto;
+  }
+  /**********************todo**************************************/
+  .todo {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .todo-text {
+    float: none;
+    margin-top: -85px;
+    width: 50%;
+    padding-left: 0px;
+    margin-left: 174px;
+    height: 85px;
+  }
+  .todo-text h3 {
+    font-size: 10px;
+    margin-bottom: 5px;
+    width: 145px;
+  }
+  .todo-text ul li {
+    font-size: 8px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .todo img {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 18% 100%);
+    margin-left: 0px;
+
+    height: auto;
+  }
+  /*************formulario****************************/
+  .formulario {
+    padding-left: 20px;
+  }
+  .logo3 img {
+    height: auto;
+    width: 50%;
+    margin-left: 70px;
+    margin-top: 40px;
+  }
+  .linea3 {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .icon-phone {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .icon-location {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .icon-mail-alt {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  /****** Menu hamburguesa*********/
+
+  .menu-button-mobile {
+    /*el menu burguer en si*/
+    font-size: 30px;
+    height: 60px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 340px;
+    margin-top: -60px;
+  }
+  .menu-container-mobile {
+    /*el fondo*/
+    width: 100%;
+    height: 100vh;
+    background-color: #132b5e;
+    position: absolute;
+    opacity: 0.99;
+    top: 100px;
+    left: -100%;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: left 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .menu-container-mobile > a {
+    /* los 3*/
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #132b5e;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 20px;
+    top: -18px;
+    width: 33.3%;
+    position: relative;
+  }
+  #toggle-mobile-menu:checked ~ .menu-container-mobile {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** segundo nivel********/
+  .menu-container2 {
+    width: 100%;
+    height: 140px;
+    top: -65px;
+    position: relative;
+  }
+  .menu-container2 ul {
+    list-style: none;
+    font-family: "Montserrat-Bold";
+  }
+  .menu-container2 li {
+    line-height: 2rem;
+    position: relative;
+    width: 280px;
+  }
+  .menu-container2 li ul {
+    position: absolute;
+    font-family: "Montserrat-Regular";
+  }
+  .menu-container2 ul li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-container2 ul li a {
+    position: relative;
+    left: 80px;
+    top: 30px;
+  }
+  .contenedor-menu {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+    z-index: 1500;
+  }
+  .contenedor-menu a:hover {
+    text-decoration: none;
+  }
+  .contenedor-menu a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+    position: relative;
+    z-index: 1;
+  }
+  .menu-btn {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+
+  .menu-label {
+    width: 100%;
+  }
+  #toggle-mobile-menu1:checked ~ .contenedor-menu {
+    left: 0;
+    transition: left 0.2s;
+  }
+  /******** tercer nivel********/
+  .menu-container3 {
+    width: 100%;
+    height: 140px;
+    top: -160px;
+    position: relative;
+  }
+  .contenedor-menu2 {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    width: 100%;
+    transition: left 0.2s;
+    z-index: 1000;
+  }
+  .contenedor-menu2 a {
+    margin-bottom: 0px;
+    background-color: #3164ab;
+    border-bottom: 2px solid #fff;
+    font-size: 14px;
+    padding: 6px;
+  }
+  #toggle-mobile-menu2:checked ~ .contenedor-menu2 {
+    left: 0;
+    transition: left 0.2s;
+  }
+  .menu-btn2 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #fff;
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+  }
+  /***********nivel 4******************/
+  .menu-container4 {
+    width: 100%;
+    height: 150px;
+    top: -55px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .menu4 {
+    position: absolute;
+    top: -120px;
+    right: 0%;
+    width: 100%;
+    transition: left 0.2s;
+    background-color: #3164ab;
+  }
+  .menu4 a {
+    margin-top: 27px;
+  }
+
+  /***** fin del menu hambuguesa*****/
+  /**********Social*********************************************************/
+  .social {
+    left: 40%;
+    top: 90%;
+    z-index: 2000;
+    position: fixed;
+  }
+  .social ul {
+    list-style: none;
+    transform: translate(-40%, 0%);
+    display: flex;
+  }
+
+  .social ul li a {
+    display: block;
+    position: relative;
+    padding: 10px 24px;
+    opacity: 1;
+    font-size: 30px;
+  }
+  /********modal********/
+  .modal-content {
+    margin-top: 170px;
+  }
+} /**hast aca**/
